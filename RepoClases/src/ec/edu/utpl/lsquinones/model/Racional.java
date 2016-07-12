@@ -14,6 +14,13 @@ public class Racional {
     private int numerador;
     private int denominador;
 
+    public Racional(int numerador, int denominador) {
+        this.numerador = numerador;
+        setDenominador(denominador);
+    }
+
+    
+    
     public int getNumerador() {
         return numerador;
     }
@@ -36,6 +43,27 @@ public class Racional {
     }
     
     
+    public Racional sumar(Racional otro){
+        return new Racional(numerador * otro.getDenominador() + otro.getNumerador() * denominador,
+        denominador * otro.getDenominador());
+    }
+    
+    public boolean esMenorQue(Racional otro){
+        return numerador * otro.getDenominador() < otro.getNumerador() * denominador;
+    }
+    
+    public Racional obtenerMayor(Racional otro){
+        if(this.esMenorQue(otro)){
+            return otro;
+        }else{
+            return this;
+        }
+    }
+    
+    
+    public String toString(){
+        return String.format("%d/%d", this.numerador, this.denominador);
+    }
     
     
     

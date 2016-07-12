@@ -12,12 +12,17 @@ package ec.edu.utpl.lsquinones.model;
  */
 public class EjecutarRacional {
     public static void main(String[] args) {
-        Racional r1 = new Racional();
+        Racional x = new Racional(1, 3);
+        Racional y = new Racional(5, 7);
+        Racional z = new Racional(3, 2);
         
     
+        Racional r = x.sumar(y).sumar(z);
         
-        r1.setNumerador(2);
-        r1.setDenominador(0);
+        System.out.println("Numerador de r: " + r.getNumerador());
+        System.out.println("Denominador de r: " + r.getDenominador());
+        System.out.println("El mayor entre x y y es:" + x.obtenerMayor(y).toString());
+        
         
        
     }
