@@ -13,6 +13,7 @@ package ec.edu.utpl.lsquinones.model;
 public class Estudiante {
     private String nombre;
     private String apellido;
+    private int edad;
 
     public Estudiante(String nombre, String apellido) {
         this.nombre = nombre;
@@ -33,6 +34,14 @@ public class Estudiante {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
     
     
