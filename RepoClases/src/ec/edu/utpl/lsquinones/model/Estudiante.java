@@ -24,13 +24,7 @@ public class Estudiante {
         return apellido;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
+   
 
     
     
